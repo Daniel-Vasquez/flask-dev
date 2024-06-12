@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparte tu frase - Plataforma para Compartir Inspiración</title>
+    <meta name="description" content="Comparte tus frases inspiradoras con nuestra comunidad. Escribe y publica tus pensamientos para motivar a otros.">
+    <meta name="keywords" content="frases, inspiración, motivación, compartir, comunidad">
+    <meta name="author" content="Tu Nombre">
+    
+    <!-- Open Graph Meta Tags para Redes Sociales -->
+    <meta property="og:title" content="Comparte tu frase - Plataforma para Compartir Inspiración">
+    <meta property="og:description" content="Comparte tus frases inspiradoras con nuestra comunidad. Escribe y publica tus pensamientos para motivar a otros.">
+    <meta property="og:image" content="book-img.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="shortcut icon" href="book.svg" type="image/x-icon">
+    <style>
+      .container {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .section-form {
+        display: flex;
+        justify-content: center;
+      }
+
+      .section-form__form {
+        max-width: 500px; 
+        width: 100%;
+      }
+
+      .form__input {
+        width: 100%;
+      }
+
+      .form__textarea {
+        resize: none; 
+        overflow: hidden; 
+        min-height: 150px; 
+        max-height: 100px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 style="text-align: center;">Comparte una frase</h1>
+      <section class="section-form">
+        <form id="textForm" class="section-form__form">
+          <label for="name">Nombre:</label>
+          <input 
+            class="form__input"
+            type="text" 
+            id="name" 
+            name="name" 
+            required 
+          />
+          <label for="text">Escribe tu frase aquí:</label>
+          <textarea 
+            class="form__textarea"
+            type="text" 
+            id="text" 
+            name="textarea" 
+            required
+          ></textarea>
+          <br>
+          <button type="button" onclick="saveText()">Publicar</button>
+        </form>
+      </section>
+
+      <h2>Frases compartidas</h2>
+      <div id="submittedTexts"></div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
